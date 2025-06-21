@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arduino Hotel Management System</title>
+  <style>
+    /* Reset ve temel ayarlar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #2196f3;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      color: #2196f3;
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #555;
+      font-style: italic;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #1976d2;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #1976d2;
+      padding-bottom: 5px;
+      font-weight: 600;
+    }
+
+    /* Overview paragraph */
+    .overview p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #444;
+    }
+
+    /* Features list */
+    .features ul {
+      list-style-type: square;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #555;
+      font-size: 1.1rem;
+      padding-left: 20px;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(33, 150, 243, 0.5);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #2196f3;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Arduino Integrated Hotel Management System</h1>
+    <p class="subtitle">Designed and Developed by Yunus Emre Oflaz</p>
+  </header>
+
+  <main>
+    <section class="overview">
+      <h2>Project Overview</h2>
+      <p>
+        This project was developed using Arduino and focuses on managing hotel operations such as
+        check-in/check-out, room status tracking, and automated access control using RFID cards. It
+        aims to provide a simple, low-cost alternative to commercial hotel management systems.
+      </p>
+    </section>
+
+    <section class="features">
+      <h2>Features</h2>
+      <ul>
+        <li>RFID card-based room access</li>
+        <li>Room status display (occupied / available)</li>
+        <li>Guest registration and logging via LCD and buttons</li>
+        <li>Data tracking through serial monitor</li>
+      </ul>
+    </section>
+
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="images/1.jpg" alt="Resim 1" />
+        <img src="images/2.jpg" alt="Resim 2" />
+        <img src="images/3.jpg" alt="Resim 3" />
+        <img src="images/4.jpg" alt="Resim 4" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🔗 <a href="https://github.com/ketronyun" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
+  </footer>
+</body>
+</html>
