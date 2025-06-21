@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Arduino Hotel Management System</title>
   <style>
-    /* Reset ve temel ayarlar */
+    /* Temel stil ayarları */
     * {
       margin: 0;
       padding: 0;
@@ -20,7 +20,6 @@
       padding: 20px;
     }
 
-    /* Header */
     header {
       text-align: center;
       padding-bottom: 20px;
@@ -31,7 +30,6 @@
     header h1 {
       color: #2196f3;
       font-size: 2.5rem;
-      margin-bottom: 8px;
     }
 
     .subtitle {
@@ -39,7 +37,6 @@
       font-style: italic;
     }
 
-    /* Sections */
     section {
       margin-bottom: 40px;
     }
@@ -49,24 +46,16 @@
       margin-bottom: 15px;
       border-bottom: 2px solid #1976d2;
       padding-bottom: 5px;
-      font-weight: 600;
     }
 
-    /* Overview paragraph */
-    .overview p {
-      font-size: 1.1rem;
+    .overview p,
+    .features ul {
       max-width: 700px;
       margin: 0 auto;
-      color: #444;
     }
 
-    /* Features list */
     .features ul {
-      list-style-type: square;
-      max-width: 600px;
-      margin: 0 auto;
-      color: #555;
-      font-size: 1.1rem;
+      list-style: square;
       padding-left: 20px;
     }
 
@@ -74,7 +63,6 @@
       margin-bottom: 10px;
     }
 
-    /* Gallery */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -86,17 +74,40 @@
     .gallery-grid img {
       width: 100%;
       border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
     }
 
     .gallery-grid img:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(33, 150, 243, 0.5);
     }
 
-    /* Footer */
+    /* Lightbox stil */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #000;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
     footer {
       text-align: center;
       padding-top: 15px;
@@ -127,8 +138,7 @@
       <h2>Project Overview</h2>
       <p>
         This project was developed using Arduino and focuses on managing hotel operations such as
-        check-in/check-out, room status tracking, and automated access control using RFID cards. It
-        aims to provide a simple, low-cost alternative to commercial hotel management systems.
+        check-in/check-out, room status tracking, and automated access control using RFID cards.
       </p>
     </section>
 
@@ -145,16 +155,30 @@
     <section class="gallery">
       <h2>Gallery</h2>
       <div class="gallery-grid">
-        <img src="images/1.jpg" alt="Resim 1" />
-        <img src="images/2.jpg" alt="Resim 2" />
-        <img src="images/3.jpg" alt="Resim 3" />
-        <img src="images/4.jpg" alt="Resim 4" />
+        <a href="#img1"><img src="images/1.jpg" alt="Resim 1" /></a>
+        <a href="#img2"><img src="images/2.jpg" alt="Resim 2" /></a>
+        <a href="#img3"><img src="images/3.jpg" alt="Resim 3" /></a>
+        <a href="#img4"><img src="images/4.jpg" alt="Resim 4" /></a>
+      </div>
+
+      <!-- Lightbox görünümleri -->
+      <div id="img1" class="lightbox">
+        <a href="#"><img src="images/1.jpg" alt="Resim 1 Büyütülmüş" /></a>
+      </div>
+      <div id="img2" class="lightbox">
+        <a href="#"><img src="images/2.jpg" alt="Resim 2 Büyütülmüş" /></a>
+      </div>
+      <div id="img3" class="lightbox">
+        <a href="#"><img src="images/3.jpg" alt="Resim 3 Büyütülmüş" /></a>
+      </div>
+      <div id="img4" class="lightbox">
+        <a href="#"><img src="images/4.jpg" alt="Resim 4 Büyütülmüş" /></a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>🔗 <a href="https://github.com/ketronyun" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
+    <p>🔗 <a href="https://github.com/ketronyun" target="_blank">GitHub Repository</a></p>
   </footer>
 </body>
 </html>
