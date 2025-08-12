@@ -30,7 +30,7 @@ Hardware:
 
 Software:
 
-    Language: C# (.NET Framework / .NET 6)
+    Language: C# (.NET Framework / .NET 8)
 
     Database: SQLite / SQL Server LocalDB (offline mode)
 
